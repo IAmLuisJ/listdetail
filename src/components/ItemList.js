@@ -1,7 +1,7 @@
 import React from 'react';
 
-const SongList = (props) => {
+const ItemList = (props) => {
     return props.songList.map( (song) => { return <div>song.title</div>})
 }
 
-export default SongList;
+export default ItemList;
