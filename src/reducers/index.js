@@ -1,5 +1,6 @@
+import { combineReducers } from "redux";
 
-export const listReducer = () => {
+const listReducer = () => {
     return [
         { title: 'example item', detail: 'detail example'},
         { title: 'another example', detail: 'thshksd'},
@@ -7,9 +8,15 @@ export const listReducer = () => {
     ]
 }
 
-export const selectedItemReducer = (selectedSong=null, action) => {
-    if (action === 'SELECT_ITEM') {
+const selectedItemReducer = (selectedItem = null, action) => {
+    if (action.type === 'SELECT_ITEM') {
         return action.payload;
     }
+
+    return selectedItem;
 }
 
+export default combineReducers({
+    items: listReducer,
+    selectedItem: selectedItemReducer
+})

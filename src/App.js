@@ -5,8 +5,10 @@ import ItemList from './components/ItemList';
 function App() {
   return (
     <div className="App">
-      <ItemList />
-      <ItemDetail />
+      <div className='container'>
+        <ItemList />
+        <ItemDetail />
+      </div>
     </div>
   );
 }

@@ -1,7 +1,8 @@
 import React from 'react';
+import { connect } from 'react-redux';
 
 const ItemList = (props) => {
-    return props.songList.map( (song) => { return <div>song.title</div>})
+    return <div className='ItemList'>Item</div>
 }
 
-export default ItemList;
+export default connect()(ItemList);
