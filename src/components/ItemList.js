@@ -5,4 +5,9 @@ const ItemList = (props) => {
     return <div className='ItemList'>Item</div>
 }
 
-export default connect()(ItemList);
+const mapStateToProps = (state) => {
+    console.log(state)
+    return state;
+}
+
+export default connect(mapStateToProps)(ItemList);
