@@ -4,7 +4,7 @@ import { selectItem } from '../actions';
 
 const ItemList = (props) => {
     return props.items.map( (item) => {
-            return (<div className='item' key={item.title}>{item.title}<div><button onClick={()=>{}}>Select</button></div></div>)}
+            return (<div className='item' key={item.title}>{item.title}<div><button onClick={()=>{props.selectItem(item)}}>Select</button></div></div>)}
         );
     }
 
